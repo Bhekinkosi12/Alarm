@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             NavigationPage.HasNavigationBar="False"
+                 BackgroundColor="#121212" 
+              xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+  xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"     
+  xmlns:punny="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+          
+             x:Class="Alarm.VIews.Popup.Popups">
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation 
+        PositionIn="Center"
+        PositionOut="Center"
+        ScaleIn="1.2"
+        ScaleOut="0.8"
+        DurationIn="400"
+        DurationOut="300"
+        EasingIn="SinOut"
+        EasingOut="SinIn"
+        HasBackgroundAnimation="True"/>
+    </pages:PopupPage.Animation>
+    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+        <Frame Padding="4" BackgroundColor="Transparent" >
+            <Label HorizontalOptions="Center" >
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                            <Span Text="02" TextColor="White" FontSize="30" BackgroundColor="Transparent" />
+                             <Span Text=":" TextColor="White" FontSize="30" BackgroundColor="Transparent" />
+                            <Span Text="32" TextColor="White" FontSize="30" BackgroundColor="Transparent" />
+                             <Span Text=" pm" TextColor="White" FontSize="30" BackgroundColor="Transparent" />
+
+
+
+                        </FormattedString.Spans>
+                        
+                    </FormattedString>
+                    
+                </Label.FormattedText>
+                
+            </Label>
+            
+        </Frame>
+
+        <Frame Padding="0" BackgroundColor="Transparent" Margin="10,40,10,0">
+
+            <StackLayout >
+                <Label Text="! Invalid input" TextColor="Red" FontSize="15" BackgroundColor="Transparent" IsVisible="False" HorizontalOptions="Center" />
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Set Hours :" TextColor="White" Grid.Column="0" BackgroundColor="Transparent" FontSize="20" HorizontalOptions="Center" VerticalOptions="Center" />
+
+                    <Entry BackgroundColor="Transparent" x:Name="ENT_Hours" TextColor="White" Placeholder="02" PlaceholderColor="Gray" Grid.Column="1" FontSize="20" Keyboard="Numeric" MaxLength="2" />
+
+
+                </Grid>
+
+            </StackLayout>
+          
+            
+            
+        </Frame>
+
+        <Frame Padding="0" BackgroundColor="Transparent" Margin="10,10,10,0">
+
+            <StackLayout >
+                <Label Text="! Invalid input" TextColor="Red" FontSize="15" BackgroundColor="Transparent" IsVisible="False" HorizontalOptions="Center" />
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Set Minutes :" TextColor="White" Grid.Column="0" BackgroundColor="Transparent" FontSize="20" HorizontalOptions="Center" VerticalOptions="Center" />
+
+                    <Entry BackgroundColor="Transparent" x:Name="ENT_minutes" TextColor="White" Placeholder="32" PlaceholderColor="Gray" Grid.Column="1" FontSize="20" Keyboard="Numeric" MaxLength="2" />
+
+
+                </Grid>
+
+            </StackLayout>
+
+
+
+        </Frame>
+
+        <Frame Padding="0" BackgroundColor="Transparent" Margin="0,16">
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+
+                </Grid.ColumnDefinitions>
+
+                <Button Text="PM" TextColor="Black" x:Name="PM_button" Clicked="PM_button_Clicked" Grid.Column="0" BackgroundColor="White" BorderColor="White" BorderWidth="1" CornerRadius="7" HorizontalOptions="End"/>
+
+                <Button Text="AM" TextColor="White" x:Name="AM_button" Clicked="AM_button_Clicked"
+                         Grid.Column="1" BackgroundColor="Black" BorderColor="White" BorderWidth="1" CornerRadius="7" HorizontalOptions="Start"/>
+
+
+            </Grid>
+            
+            
+            
+        </Frame>
+
+
+
+        <!-- place your layout content here ....fx a close popup button -->
+        <Button BackgroundColor="#ffa500" x:Name="BTN_Submit" Clicked="BTN_Submit_Clicked" Text="Done" FontAttributes="Bold" FontSize="20" VerticalOptions="EndAndExpand" />
+    </StackLayout>
+
+    </pages:PopupPage>

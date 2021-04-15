@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#121212"
+             xmlns:punny="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             x:Class="Alarm.MainPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="200" />
+        </Grid.RowDefinitions>
+
+        <Frame BackgroundColor="Transparent" Padding="5" Grid.Row="0" >
+
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    
+                    <RowDefinition Height="50" />
+
+
+                </Grid.RowDefinitions>
+
+
+                <StackLayout Orientation="Vertical" Spacing="0" Grid.Row="0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <Label  Margin="50,0,50,0"    >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="0" x:Name="time_firstDigit" FontSize="100" BackgroundColor="Transparent" TextColor="#404040" FontAttributes="Bold" />
+                                    <Span Text="{Binding Hours}" x:Name="time_secondDigit" FontSize="100" BackgroundColor="Transparent" TextColor="#c0c0c0" FontAttributes="Bold" />
+                                <Span Text=":" x:Name="BipTimer"  FontSize="110" BackgroundColor="Transparent" TextColor="#404040" FontAttributes="Bold" />
+                                
+
+                            </FormattedString.Spans>
+                        </FormattedString>
+                        
+                    </Label.FormattedText>
+                    
+                </Label>
+
+                <Label  Margin="50,0,50,0"    >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                 <Span Text="{Binding Minutes}" x:Name="time_fouthDigit" FontSize="100" BackgroundColor="Transparent" TextColor="#c0c0c0" FontAttributes="Bold" />
+                               
+
+
+                            </FormattedString.Spans>
+                        </FormattedString>
+
+                    </Label.FormattedText>
+
+                </Label>
+
+                </StackLayout>
+
+            </Grid>
+            
+            
+            
+        </Frame>
+
+
+        <StackLayout Orientation="Vertical" Margin="10,10">
+        <Frame Padding="0" BackgroundColor="#ffa500" HorizontalOptions="EndAndExpand" CornerRadius="40"  >
+            <Expander  FlowDirection="LeftToRight"   >
+                <Expander.Header >
+
+                    <Image BackgroundColor="Transparent" HorizontalOptions="Center" HeightRequest="30" WidthRequest="50" Margin="0,5" VerticalOptions="Center" Source="alarm.png" Aspect="AspectFit" />
+                </Expander.Header>
+                
+
+
+
+                <Expander.Content>
+
+                    <ListView ItemsSource="{Binding DataAccess}"  RowHeight="30"  >
+                        <ListView.ItemTemplate>
+                            <DataTemplate >
+
+                                <ViewCell >
+                                    <Label x:Name="LB_Cell" Text="{Binding LastTime}" HorizontalOptions="CenterAndExpand" FontSize="20" TextColor="#303030"  BackgroundColor="Transparent" />
+
+                                </ViewCell>
+                                
+                                
+                            </DataTemplate>
+                            
+                        </ListView.ItemTemplate>
+                        
+                        
+                    </ListView>
+                    
+                    
+                    
+                </Expander.Content>
+                
+                
+                
+                
+                
+            </Expander>
+            
+            
+            
+        </Frame>
+
+        </StackLayout>
+
+        <Button BackgroundColor="#ffa500" Text="Check" Grid.Row="1" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Button_Clicked" />
+    </Grid>
+
+</ContentPage>

@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alarm.Android", "Alarm\Alarm.Android\Alarm.Android.csproj", "{76BBAEDF-A758-4D9E-84E5-9ABAFA117307}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alarm", "Alarm\Alarm\Alarm.csproj", "{44EF1A78-B021-4B17-9B1F-29B41713844B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{76BBAEDF-A758-4D9E-84E5-9ABAFA117307}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76BBAEDF-A758-4D9E-84E5-9ABAFA117307}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76BBAEDF-A758-4D9E-84E5-9ABAFA117307}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{76BBAEDF-A758-4D9E-84E5-9ABAFA117307}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76BBAEDF-A758-4D9E-84E5-9ABAFA117307}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76BBAEDF-A758-4D9E-84E5-9ABAFA117307}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{44EF1A78-B021-4B17-9B1F-29B41713844B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44EF1A78-B021-4B17-9B1F-29B41713844B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44EF1A78-B021-4B17-9B1F-29B41713844B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{44EF1A78-B021-4B17-9B1F-29B41713844B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44EF1A78-B021-4B17-9B1F-29B41713844B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44EF1A78-B021-4B17-9B1F-29B41713844B}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BD211EBC-23A9-491F-B9D2-0DAA2C4BF739}
+	EndGlobalSection
+EndGlobal
